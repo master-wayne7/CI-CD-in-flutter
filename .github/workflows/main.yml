@@ -19,7 +19,8 @@ jobs:
       - run: flutter pub get
       - run: flutter test
       - run: flutter build apk --debug --split-per-abi
-      - run: flutter build ios --no-codesign
+      - run: |
+          flutter build ios --no-codesign
           cd build/ios/iphoneos
           mkdir Payload
           cd Payload
